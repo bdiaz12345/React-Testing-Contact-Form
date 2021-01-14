@@ -2,5 +2,12 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
+import React from 'react'
 import '@testing-library/jest-dom/extend-expect';
 import 'mutationobserver-shim';
+import * as rtl from '@testing-library/react'
+import App from './App'
+
+it ('renders the Contact Form', () => {
+    rtl.render(<App />)
+})
